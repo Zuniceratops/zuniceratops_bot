@@ -1,0 +1,26 @@
+.message-input {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.logo-center {
+    display: flex;
+    justify-content: center;
+}
+.logo {
+    max-width: 350px;
+    border-radius: 50%;
+}
+.name-bot {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-size: 30px;
+}
+.push {
+    padding: 7px 30px;
+    margin-top: 15px;
+    background: chocolate;
+    border: chocolate;
+    color: cornsilk;
+}
