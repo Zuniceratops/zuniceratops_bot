@@ -2,12 +2,20 @@
 // https://api.telegram.org/bot1087301654:AAFZKpAZJul6BK-sl7-GU_NItuYkkDxFmTE/getUpdates;
 const token = '1087301654:AAFZKpAZJul6BK-sl7-GU_NItuYkkDxFmTE'
 const url = 'https://api.telegram.org/bot'+ token +'/sendMessage?chat_id=-427190390&text=';
+
+const input = document.querySelector('.message');
+const button = document.querySelector('button');
+
 function pushMessage() {
-    let message = document.querySelector('.message').value;
+    let message = input.value;
     let xhttp = new XMLHttpRequest();
     xhttp.open("GET", url + message, true);
     xhttp.send();
 
+    input.value = "";
 }
 
-document.querySelector('button').addEventListener('click', pushMessage);
+button.addEventListener('click', pushMessage);
+
+
+
