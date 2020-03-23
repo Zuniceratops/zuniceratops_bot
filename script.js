@@ -3,19 +3,19 @@
 const token = '1087301654:AAFZKpAZJul6BK-sl7-GU_NItuYkkDxFmTE'
 const url = 'https://api.telegram.org/bot'+ token +'/sendMessage?chat_id=-427190390&text=';
 
+
 const input = document.querySelector('.message');
 const button = document.querySelector('button');
 
-function pushMessage() {
+async function pushMessage() {
     let message = input.value;
-    let xhttp = new XMLHttpRequest();
-    xhttp.open("GET", url + message, true);
-    xhttp.send();
+    await fetch(url + message);
 
-    input.value = "";
+    input.value = '';
 }
-
 button.addEventListener('click', pushMessage);
+
+
 
 
 
